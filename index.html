@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>雷锋好同志</title>
+        <link rel="stylesheet" href="css/weui.min.css"/>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+  		<header>
+  			<img class="banner" src="image/banner.png" alt="">
+  		</header>
+
+  		<div class = "page list js_show content">
+  			<div class="weui-cell">
+			    <img class="minPic" src="image/zan.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>好赞</p>
+			    </div>
+			    <div id="zan" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/jinli.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>敬礼</p>
+			    </div>
+			    <div id="jinli" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/study.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>好好学习</p>
+			    </div>
+			    <div id="study" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/goahead.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>不忘初心 继续前行</p>
+			    </div>
+			    <div id="goahead" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/gan.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>撸起袖子加油干</p>
+			    </div>
+			    <div id="gan" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/zougan.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>走对路 扎实干</p>
+			    </div>
+			    <div id="zougan" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/callme.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>请叫我雷锋</p>
+			    </div>
+			    <div id="callme" class="weui-cell__ft download">下载</div>
+			</div>
+
+			<div class="weui-cell">
+			    <img class="minPic" src="image/looklike.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>我愿意做一颗螺丝钉</p>
+			    </div>
+			    <div id="looklike" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/workfor.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>为人民服务</p>
+			    </div>
+			    <div id="workfor" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/goodyoung.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>中国好青年</p>
+			    </div>
+			    <div id="goodyoung" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/workgood.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>劳动最光荣</p>
+			    </div>
+			    <div id="workgood" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/promise.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>保证完成任务</p>
+			    </div>
+			    <div id="promise" class="weui-cell__ft download">下载</div>
+			</div>
+			<div class="weui-cell">
+			    <img class="minPic" src="image/help.png" alt="">
+			    <div class="weui-cell__bd">
+			        <p>亲 要帮忙么</p>
+			    </div>
+			    <div id="help" class="weui-cell__ft download">下载</div>
+			</div>
+  		</div>
+  		<div class="js_dialog" id="dialog" style="opacity: 1;">
+            <div class="weui-mask"></div>
+            <div class="weui-dialog">
+            	<div class="weui-dialog__hd"><strong class="weui-dialog__title">长按图片保存</strong></div>
+                <div class="weui-dialog__bd"><img id="pic" src="image/goahead.png" alt=""></div>
+                <div class="weui-dialog__ft">
+                    <a id="ok" href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+    	var minPic = document.querySelectorAll(".minPic");
+    	for(var i = 0; i < minPic.length; i++) {
+    		minPic[i].height = minPic[i].width;
+    	}
+    	var dialog = document.querySelector("#dialog");
+    	var pic = document.querySelector("#pic");
+    	var downLoad = document.querySelectorAll(".download");
+    	for(var i=0;i < downLoad.length;i++) {
+    		downLoad[i].addEventListener("click",function (e) {
+    			dialog.style.display = "block";
+    			pic.src = "image/" + e.target.id + ".png";
+    			
+    		})
+    	}
+
+    	document.querySelector("#ok").addEventListener("click",function (e) {
+    		dialog.style.display = "none";
+    	})
+
+    </script>
+</html>
