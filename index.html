@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-        <title>雷锋好同志</title>
+        <title>励志小雷锋，传递正能量</title>
         <link rel="stylesheet" href="css/weui.min.css"/>
         <link rel="stylesheet" href="css/index.css">
     </head>
@@ -129,7 +129,7 @@
     	for(var i=0;i < downLoad.length;i++) {
     		downLoad[i].addEventListener("click",function (e) {
     			dialog.style.display = "block";
-    			pic.src = "image/" + e.target.id + ".png";
+    			pic.src = "image/" + e.target.id + ".gif";
     			
     		})
     	}
@@ -137,6 +137,38 @@
     	document.querySelector("#ok").addEventListener("click",function (e) {
     		dialog.style.display = "none";
     	})
+
+    </script>
+
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <!-- 引入配置 -->
+    <script src="http://hongyan.cqupt.edu.cn/wx-api/share.js"></script>
+
+    <script>
+        WXSHARE.config({debug: false});
+        WXSHARE.ready(function() {
+            var option = {
+                  title: "励志小雷锋，传递正能量",
+                  link: "http://hongyan.cqupt.edu.cn/leifeng/index.html",
+                  imgUrl: 'http://hongyan.cqupt.edu.cn/leifeng/images/banner.png',
+                  desc: '雷锋表情包欢迎下载！',
+                  type: '',
+                  success: function() {
+                      console.log('分享成功');
+                  },
+                  cancel: function() {
+                      console.log('取消分享');
+                  },
+              };
+
+              wx.onMenuShareTimeline(option);
+              wx.onMenuShareAppMessage(option);
+              wx.onMenuShareQQ(option);
+              wx.onMenuShareWeibo(option);
+              wx.onMenuShareQZone(option);
+        
+        });
 
     </script>
 </html>

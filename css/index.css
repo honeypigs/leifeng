@@ -28,3 +28,6 @@ header .banner {
 #dialog {
   display: none;
 }
+#pic {
+  width: 100%;
+}
